@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <center>
+        <table border=2>
+            <thead>
+                <tr>
+                    <td>Original URL</td>
+                    <td>Hashed URL</td>
+                </tr>
+            </thead>
+        {% for object in objects %}
+        <tr>
+            <td>{{object.original_url}}</td>
+            <td>{{object.shortened_url}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'home' %}">Add Another</a>
+    </center>
+</body>
+</html>
